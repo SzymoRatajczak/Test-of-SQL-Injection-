@@ -1,4 +1,4 @@
-#find SQL injection error only if code returns errors
+#finding SQL injection error only if code returns errors
 
 use strict;
 use HTTP::Request::Common qw(POST GET);
@@ -17,7 +17,7 @@ my @cities=qw(Auckland Seattle London Portland Manchester Redmond Brisbane Ndola
 
 while(1)
 {
-my $city=randomSQL($cities[rand @cities]);
+my $city=randomSQL($cities(rand [@cities]));
 my $zip=randomSQL(10_000_int(rand 89_999));
 
 print "try [$cities] and [$zip]";
